@@ -3,3 +3,13 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+  form(method="POST", action="/calculate")
+    label(for="b") b
+    input(name="b")
+    label(for="s") s
+    input(name="s")
+    label(for="o") o
+    input(name="o")
+    label(for="d") d
+    input(name="d")
+    button(type="submit") Calculate

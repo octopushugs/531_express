@@ -6,4 +6,9 @@ router.get('/', function(req, res, next) {
   res.json({ requested_at: req.requestTime });
 });
 
+router.post('/', function(req, res, next) {
+  console.log(req.body)
+  next();
+});
+
 module.exports = router;
