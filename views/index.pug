@@ -1,15 +1,23 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
-  form(method="POST", action="/calculate")
-    label(for="b") b
-    input(name="b")
-    label(for="s") s
-    input(name="s")
-    label(for="o") o
-    input(name="o")
-    label(for="d") d
-    input(name="d")
-    button(type="submit") Calculate
+  script(src="/javascripts/index.js")
+  .row
+    .col-xs-12
+      h1= title
+      p Welcome to #{title}
+  .row
+    .col-xs-12
+      form.max-form(method="POST", action="/calculate")
+        label(for="b") b
+        input(name="b")
+        label(for="s") s
+        input(name="s")
+        label(for="o") o
+        input(name="o")
+        label(for="d") d
+        input(name="d")
+    .col-xs-12
+      button#rm__submit-btn(type="button") Calculate
+  .row
+    .col-xs-12.results-col
