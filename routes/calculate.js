@@ -5,10 +5,20 @@ const pug = require('pug');
 const _ = require('lodash');
 const object = require('lodash/fp/object');
 
+function RepCalculator(data) {
+  this.calculateMaxes = function() {
+
+  };
+
+  this.calculateProgram = function(maxes) {
+
+  };
+}
+
 // calculates 1rm maxes
 router.post('/', function(req, res, next) {
-  let maxes = { b: null, s: null, o: null, d: null };
-  let program = { b: [], s: [], o: [], d: [] };
+  let maxes = { bench: null, squat: null, overhead: null, deadlift: null };
+  let program = { bench: [], squat: [], overhead: [], deadlift: [] };
   let responseMarkup = "";
 
   // The body should only contain the values for the 4 main lifts, so we should
@@ -20,8 +30,8 @@ router.post('/', function(req, res, next) {
       // formula: 1rm = w(1 + r/30), assuming r > 1
       maxes[key] = Math.round(value * (1 + (1.0/30.0)));
 
-      // then round to the nearest multiple of 2.5 for easy plate math
-      maxes[key] = Math.ceil(maxes[key]/2.5)*2.5;
+      // then round to the nearest multiple of 5 for easy plate math
+      maxes[key] = Math.ceil(maxes[key]/5)*5;
     }
   });
 
