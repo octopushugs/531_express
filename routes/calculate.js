@@ -9,6 +9,9 @@ const object = require('lodash/fp/object');
 const CalculatorService = require('../services/calculatorService');
 
 router.post('/', function(req, res, next) {
+  // while this kind of logic would normally be included in a controller, I'm opting for here
+  // because there is no model layer to interact with. It seemed like overkill to include anything more
+  // than CalculatorService
   let responseMarkup = "";
 
   let maxes = CalculatorService.calculateOneRepMax(req.body);
