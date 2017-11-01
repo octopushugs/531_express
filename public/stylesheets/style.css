@@ -6,3 +6,32 @@ body {
 a {
   color: #00B7FF;
 }
+
+.max-list li {
+  margin-right: 10px;
+}
+
+.max-form input {
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 12%;
+}
+
+.submit-btn {
+  margin-top: 12px;
+}
+
+/* Styles adapted from user baptme on StackOverflow: https://stackoverflow.com/a/11580587/2966334 */
+hr {
+  -moz-border-bottom-colors: none;
+  -moz-border-image: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  border-color: #eeeeee;
+  -moz-use-text-color #eeeeee;
+  border-style: solid none;
+  border-width: 1px 0;
+  margin: 18px 0;
+}
+

@@ -4,6 +4,7 @@
 
 const assert = require('assert');
 const BasicMathService = require('../services/basicMathService');
+const CalculatorService = require('../services/calculatorService');
 
 describe('BasicMathService', () => {
   describe('#roundToNearestFive', () => {
@@ -30,5 +31,11 @@ describe('BasicMathService', () => {
       assert.equal(233, BasicMathService.calculateOneRepMax(225));
       assert.equal(65, BasicMathService.calculateOneRepMax(62.5));
     });
+  });
+});
+
+describe('CalculatorService', () => {
+  describe('#calculateOneRepMax', () => {
+
   });
 });

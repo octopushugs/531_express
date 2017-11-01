@@ -5,7 +5,7 @@ block content
   .row
     .col-xs-12
       h1= title
-      p Welcome to #{title}
+      p #{subtitle}
   .row
     .col-xs-12
       form.max-form(method="POST", action="/calculate")
@@ -18,6 +18,7 @@ block content
         label(for="deadlift") deadlift
         input(name="deadlift")
     .col-xs-12
-      button#rm__submit-btn(type="button") Calculate
+      button#rm__submit-btn.btn.btn-primary.submit-btn(type="button") Calculate
+      hr
   .row
     .col-xs-12.results-col
